@@ -11,5 +11,5 @@ Build
 ----
 
 ```bash
-gcc publish.c `pkg-config --cflags --libs hiredis`
+make
 ```
