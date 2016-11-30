@@ -4,6 +4,11 @@
 static void printfRedisReply(redisReply *r) {
     int i;
 
+    if (r == NULL) {
+        fprintf(stderr, "Invalid argument. r must be not NULL.");
+        return;
+    }
+
     printf("len: %ld, elements: %ld, type: %d\n", r->len, r->elements, r->type);
     if (r->type == REDIS_REPLY_ARRAY) {
         for (i = 0; i < r->elements; i++) {
