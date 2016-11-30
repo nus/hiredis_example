@@ -20,7 +20,6 @@ static void printfRedisReply(redisReply *r) {
 int main (int argc, char **argv) {
     redisContext *c = NULL;
     void *reply = NULL;
-    redisReply *r = NULL;
     int redis_err = 0;
 
     c = redisConnect("127.0.0.1", 6379);
